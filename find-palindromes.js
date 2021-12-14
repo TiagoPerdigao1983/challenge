@@ -28,7 +28,11 @@ const newData = fs.readFile('Input01.txt', 'utf-8', (err, data) => {
 
   let dataArray = new Array(data);
 
-  return console.log(dataArray);
+  dataArray = dataArray.replace(
+    /\r?\n|\r/g,
+    ' '
+  ); /* replace all newlines with a space */
+  console.log(dataArray); /* bar bar */
 });
 
 console.log(newData);
