@@ -18,9 +18,24 @@
  *      entries is different (so ['Anna', 'ANNA', 'aNNa'] is still only 1 palindrome)
  *
  * - You can implement additional helper functions or use additional npm packages if you want - but the "app.js" must not be changed.
+ *
  */
-function findPalindromes(words) {
-    throw new Error('Please implement this function');
-}
 
-module.exports = findPalindromes;
+const fs = require('fs');
+
+fs.readFile('input01.txt', (err, data) => {
+  if (err) throw err;
+
+  console.log(data.toString());
+});
+
+// function findPalindromes(words) {
+//   const re = /[\W_]/g;
+//   const lowRegString = words.toLowerCase().replace(re, '');
+//   const reverseString = lowRegString.split('').reverse().join('');
+//   return reverseString === lowRegString;
+
+//   throw new Error('Please implement this function');
+// }
+
+// module.exports = findPalindromes;
