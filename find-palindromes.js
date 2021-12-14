@@ -26,9 +26,8 @@ const fs = require('fs');
 const newData = fs.readFile('Input01.txt', 'utf-8', (err, data) => {
   if (err) throw err;
 
-  // Converting Raw Buffer to text
-  // data using tostring function.
   let dataArray = new Array(data);
+
   return console.log(dataArray);
 });
 
