@@ -23,12 +23,16 @@
 
 const fs = require('fs');
 
-fs.readFile('input01.txt', (err, data) => {
+const newData = fs.readFile('Input01.txt', 'utf-8', (err, data) => {
   if (err) throw err;
 
-  console.log(data.toString());
+  // Converting Raw Buffer to text
+  // data using tostring function.
+  let dataArray = new Array(data);
+  return console.log(dataArray);
 });
 
+console.log(newData);
 // function findPalindromes(words) {
 //   const re = /[\W_]/g;
 //   const lowRegString = words.toLowerCase().replace(re, '');
